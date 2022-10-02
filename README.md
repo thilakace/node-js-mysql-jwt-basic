@@ -7,7 +7,16 @@
 
 [Created repo in github](https://github.com/thilakace/node-js-mysql-basic) 
 
-Env package: [Reference](https://www.npmjs.com/package/dotenv)
-npm install dotenv --save
+$ npm install dotenv --save  [Reference](https://www.npmjs.com/package/dotenv)
 
-npm install express --save [Reference](https://expressjs.com/)
+$ npm install express --save   [Reference](https://expressjs.com/)
+
+## for auto load save changes
+$ npm install nodemon -g
+$ nodemon server.js
+
+## for multipart/form-data
+$ npm install body-parser [Reference](https://www.npmjs.com/package/body-parser)
+
+## for mysql
+$ npm install mysql
