@@ -8,7 +8,7 @@
 
  $ nodemon server.js
 * Happy coding
- 
+
 ## Installation steps
 
 [Created repo in github](https://github.com/thilakace/node-js-mysql-basic) 
@@ -27,3 +27,9 @@ $ npm install body-parser [Reference](https://www.npmjs.com/package/body-parser)
 
 ## for mysql
 $ npm install mysql
+
+## Reference links for development
+
+* NodeJS CRUD [Reference](https://www.itsolutionstuff.com/post/node-js-crud-with-mysql-tutorial-exampleexample.html)
+
+* JWT generate token and verify token [Reference](https://www.section.io/engineering-education/how-to-build-authentication-api-with-jwt-token-in-nodejs/)

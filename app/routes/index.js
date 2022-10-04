@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
 const User = require('../model/User');
+const Auth = require('../controller/auth/login');
 
 // for parsing application/json
 router.use(bodyParser.json()); 
@@ -33,6 +34,11 @@ router.get('/test/:userId', (req, res) => {
 // });
 
 router.post('/api/register', User.create);
+
+router.get('/api/users', User.getList);
+
+//auth
+router.post('/api/doLogin', Auth.doLogin);
 
 router.use('*', (req, res) => {
     res.status(404).json({
