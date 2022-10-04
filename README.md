@@ -1,8 +1,6 @@
 # Node.js express.js MySQL JWT REST API - Basic Project Skeleton
 
-[![Author] (https://img.shields.io/badge/Author-Thilagaraja-blue.svg?style=flat-square)]
-
-[![Author](http://img.shields.io/badge/author-@davellanedam-blue.svg?style=flat-square)](https://twitter.com/davellanedam)
+[![Author](https://img.shields.io/badge/Author-Thilagaraja-blue.svg?style=flat-square)](https://github.com/thilakace)
 
 ## Daily run steps
 * Open project directory in command prompt
