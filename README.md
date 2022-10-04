@@ -1,6 +1,6 @@
 # Node.js express.js MySQL JWT REST API - Basic Project Skeleton
 
-[![Author]Thilagaraja
+[![Author] (https://img.shields.io/badge/Author-Thilagaraja-blue.svg?style=flat-square)]
 
 ## Daily run steps
 * Open project directory in command prompt
