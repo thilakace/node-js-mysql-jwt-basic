@@ -2,6 +2,8 @@
 
 [![Author] (https://img.shields.io/badge/Author-Thilagaraja-blue.svg?style=flat-square)]
 
+[![Author](http://img.shields.io/badge/author-@davellanedam-blue.svg?style=flat-square)](https://twitter.com/davellanedam)
+
 ## Daily run steps
 * Open project directory in command prompt
 * Run below cmd
