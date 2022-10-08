@@ -38,3 +38,12 @@ $ npm i jsonwebtoken
 * Encrypt and decrypt password by __bcryptjs__ [Reference](https://www.npmjs.com/package/bcryptjs)
 
 $ npm i bcryptjs
+
+## mysql-migrations
+$ npm i mysql-migrations [Reference](https://www.npmjs.com/package/mysql-migrations)
+
+* create migration
+```
+$ node migration.js add migration create_table_users
+$ node migration.js up
+```
