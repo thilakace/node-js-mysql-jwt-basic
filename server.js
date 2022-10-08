@@ -9,15 +9,11 @@ app.set('port', process.env.PORT || 3000)
 app.listen(app.get('port'))
 
 // for routes
-app.use(require('./app/routes'))
+app.use(require('./app/routes/route'))
 
-module.exports = app // for testing
+module.exports = app // for testings
 
 
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+
 

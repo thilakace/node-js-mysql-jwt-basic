@@ -33,3 +33,7 @@ $ npm install mysql
 * NodeJS CRUD [Reference](https://www.itsolutionstuff.com/post/node-js-crud-with-mysql-tutorial-exampleexample.html)
 
 * JWT generate token and verify token [Reference](https://www.section.io/engineering-education/how-to-build-authentication-api-with-jwt-token-in-nodejs/)
+$ npm i jsonwebtoken
+
+* Encrypt and decrypt password by _bcryptjs_ [Reference](https://www.npmjs.com/package/bcryptjs)
+$ npm i bcryptjs

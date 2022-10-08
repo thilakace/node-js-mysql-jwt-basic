@@ -1,13 +1,44 @@
-const con = require("../../../config/database");
+const jwt = require('jsonwebtoken');
+const User = require('../../model/User');
+var bcrypt = require('bcryptjs');
+var salt = bcrypt.genSaltSync(10);
 
-const doLogin = (req, res) => {
-   console.log(req.body);
-   let query = "SELECT * from users where email='"+req.body.email+ "' and password="+req.body.password+" and status=1";
+const doLogin = async(req, res) => {
 
-   con.query(query, function(err, result, fields){
-     if(err) throw res.json({message:err});
-     res.json({message : result});
-   })
+  try{
+    const {email, password} = req.body;
+    
+    if (!(email && password)){
+      return res.send({message:"Validation error"});
+    }
+
+    const user = await User.findOne(email);
+    console.log(password);
+    var hash = bcrypt.hashSync(password, salt);
+    
+    var check = bcrypt.compareSync("test01", hash); // true
+    console.log(check);
+    if(user && check) {
+       // generate token
+       const token = jwt.sign(
+        { user_id : user.id, email },
+        process.env.TOKEN_KEY,
+        { expiresIn : "5m"}
+      )
+     return res.status(200).json({message: "Success", token : token});
+    }else{
+      return res.send({message:"Email or password wrong!"});
+    }
+
+     
+
+    //console.log(user);
+
+  } catch (err) {
+    console.log(err.message)
+  }
+   
+   
 
 }
 

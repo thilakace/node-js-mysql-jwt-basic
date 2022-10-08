@@ -3,6 +3,7 @@ const router = express.Router()
 const bodyParser = require('body-parser')
 const User = require('../model/User');
 const Auth = require('../controller/auth/login');
+const UserController = require('../controller/UserController');
 
 // for parsing application/json
 router.use(bodyParser.json()); 
@@ -33,7 +34,7 @@ router.get('/test/:userId', (req, res) => {
 //     res.send(req.body);
 // });
 
-router.post('/api/register', User.create);
+router.post('/api/register', UserController.addUser);
 
 router.get('/api/users', User.getList);
 
