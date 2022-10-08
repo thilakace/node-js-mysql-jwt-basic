@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const User = require('../model/User');
 const Auth = require('../controller/auth/login');
 const UserController = require('../controller/UserController');
+const verifyToken = require('../middleware/verifytoken');
 
 // for parsing application/json
 router.use(bodyParser.json()); 
@@ -36,7 +37,7 @@ router.get('/test/:userId', (req, res) => {
 
 router.post('/api/register', UserController.addUser);
 
-router.get('/api/users', User.getList);
+router.get('/api/users', verifyToken, UserController.getAllUsers);
 
 //auth
 router.post('/api/doLogin', Auth.doLogin);

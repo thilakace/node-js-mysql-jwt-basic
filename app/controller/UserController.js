@@ -48,4 +48,19 @@ const addUser = async (req, res, next) => {
     }
 }
 
-module.exports = {addUser};
+const getAllUsers = async (req, res, next) => {
+    try { 
+      
+     
+     
+      // verify token
+      const decoded = jwt.verify(token, process.env.TOKEN_KEY);
+      
+      const users = await User.getList();
+      return res.send(users);
+    } catch (error) {
+      return res.status(401).send(error);
+    }
+}
+
+module.exports = {addUser, getAllUsers};

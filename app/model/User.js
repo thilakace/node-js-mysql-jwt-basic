@@ -14,12 +14,20 @@ const create = (userReq, callback) => {
 
 const getList = (req, res) => {
    
-    let sqlQuery = "SELECT * FROM Users";
+    let sqlQuery = "SELECT name,email FROM Users";
 
-    con.query(sqlQuery, function (err, result, fields) {
-        if (err) throw res.json({message : err});
-         res.json({message : result});
+    return new Promise((resolve, reject) => {
+      con.query(sqlQuery, (err, result) => {
+        if (err) {
+          reject(err);
+        }
+        else {
+          resolve(result);
+        }
+      });
     });
+
+    
    
 }
 

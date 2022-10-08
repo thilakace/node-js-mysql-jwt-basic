@@ -13,21 +13,23 @@ const doLogin = async(req, res) => {
     }
 
     const user = await User.findOne(email);
-    console.log(password);
-    var hash = bcrypt.hashSync(password, salt);
+    if (user.length ==0){
+      return res.send({message:"Invalid email!"});
+    }
+    const dbpassword = user[0].password;
+  
+    var check = bcrypt.compareSync(password, dbpassword); // true
     
-    var check = bcrypt.compareSync("test01", hash); // true
-    console.log(check);
-    if(user && check) {
+    if(check) {
        // generate token
        const token = jwt.sign(
-        { user_id : user.id, email },
+        { user_id : user[0].id, email },
         process.env.TOKEN_KEY,
         { expiresIn : "5m"}
       )
      return res.status(200).json({message: "Success", token : token});
     }else{
-      return res.send({message:"Email or password wrong!"});
+      return res.send({message:"Wrong password!"});
     }
 
      
