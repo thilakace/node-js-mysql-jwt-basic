@@ -51,6 +51,10 @@ $ node migration.js up
 ## host this application in apache2 ubuntu
 * [Reference](https://www.cloudbooklet.com/setup-node-js-with-apache-proxy-on-ubuntu-18-04-for-production/)
 * Server support PM2 [Reference](https://pm2.io/)
+```
+username : thilakazb@gmail.com
+password : using github auth / password
+```
 
 * pm2 startup
 * pm2 save
