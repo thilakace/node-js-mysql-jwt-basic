@@ -47,3 +47,12 @@ $ npm i mysql-migrations [Reference](https://www.npmjs.com/package/mysql-migrati
 $ node migration.js add migration create_table_users
 $ node migration.js up
 ```
+
+## host this application in apache2 ubuntu
+* [Reference](https://www.cloudbooklet.com/setup-node-js-with-apache-proxy-on-ubuntu-18-04-for-production/)
+* Server support PM2 [Reference](https://pm2.io/)
+
+* pm2 startup
+* pm2 save
+* systemctl enable pm2-root;systemctl start pm2-root;systemctl status pm2-root
+[Youtube video](https://www.youtube.com/watch?v=M4Y45g8bmYg)
