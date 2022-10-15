@@ -10,7 +10,7 @@ const verifyToken = require('../middleware/verifytoken');
 router.use(bodyParser.json()); 
 
 router.get('/', (req, res) => {
-    res.send('hello world')
+    res.send('hello world thilagaraja')
 })
 
 // POST method route

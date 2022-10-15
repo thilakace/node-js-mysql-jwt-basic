@@ -39,6 +39,10 @@ $ npm i jsonwebtoken
 
 $ npm i bcryptjs
 
+* for enabling cors [Reference](https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/)
+
+$ npm i cors express
+
 ## mysql-migrations
 $ npm i mysql-migrations [Reference](https://www.npmjs.com/package/mysql-migrations)
 
