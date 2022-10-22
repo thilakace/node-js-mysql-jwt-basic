@@ -9,12 +9,12 @@ const doLogin = async(req, res) => {
     const {email, password} = req.body;
     
     if (!(email && password)){
-      return res.send({message:"Validation error"});
+      return res.send({status:"error", message:"Validation error"});
     }
 
     const user = await User.findOne(email);
     if (user.length ==0){
-      return res.send({message:"Invalid email!"});
+      return res.send({status:"error", message:"Invalid email!"});
     }
     const dbpassword = user[0].password;
   
@@ -27,9 +27,9 @@ const doLogin = async(req, res) => {
         process.env.TOKEN_KEY,
         { expiresIn : "5m"}
       )
-     return res.status(200).json({message: "Success", token : token});
+     return res.json({status:"success", message: "Success", token : token});
     }else{
-      return res.send({message:"Wrong password!"});
+      return res.send({status:"error", message:"Wrong password!"});
     }
 
      

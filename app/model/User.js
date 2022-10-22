@@ -14,7 +14,7 @@ const create = (userReq, callback) => {
 
 const getList = (req, res) => {
    
-    let sqlQuery = "SELECT name,email FROM Users";
+    let sqlQuery = "SELECT name,email FROM users";
 
     return new Promise((resolve, reject) => {
       con.query(sqlQuery, (err, result) => {
@@ -32,7 +32,7 @@ const getList = (req, res) => {
 }
 
 const findOne = (email,callback) => {
-    let sqlQuery = "SELECT * FROM Users WHERE email=?";
+    let sqlQuery = "SELECT * FROM users WHERE email=?";
 
     return new Promise((resolve, reject) => {
         con.query(sqlQuery,[email], (err, result) => {
